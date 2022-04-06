@@ -70,7 +70,7 @@ pipeline {
             }
         }
 
-        stage ('printTheVariables') {
+        stage ('printhtml') {
             steps{
                 script {
                     publishHTML ([allowMissing: false,
