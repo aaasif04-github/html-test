@@ -70,19 +70,19 @@ pipeline {
             }
         }
 
-        // stage ('printTheVariables') {
-        //     steps{
-        //         script {
-        //             publishHTML ([allowMissing: false,
-        //                 alwaysLinkToLastBuild: false,
-        //                 keepAll: true,
-        //                 reportDir: '',
-        //                 reportFiles: 'myreport.html',
-        //                 reportName: 'My Reports',
-        //                 reportTitles: 'The Report'])
-        //         }
-        //     }
-        // }
+        stage ('printTheVariables') {
+            steps{
+                script {
+                    publishHTML ([allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: true,
+                        reportDir: '',
+                        reportFiles: 'myreport.html',
+                        reportName: 'My Reports',
+                        reportTitles: 'The Report'])
+                }
+            }
+        }
 
         // stage ('setTheOutputVariables') {
         //     steps{
@@ -150,11 +150,11 @@ pipeline {
 
     }
 
-    publishHTML ([allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: '',
-                    reportFiles: 'myreport.html',
-                    reportName: 'My Reports',
-                    reportTitles: 'The Report'])
+    // publishHTML ([allowMissing: false,
+    //                 alwaysLinkToLastBuild: false,
+    //                 keepAll: true,
+    //                 reportDir: '',
+    //                 reportFiles: 'myreport.html',
+    //                 reportName: 'My Reports',
+    //                 reportTitles: 'The Report'])
 }
